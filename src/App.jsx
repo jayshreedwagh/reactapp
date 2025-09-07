@@ -1,4 +1,6 @@
 function App(){
-  return "Jayu";
+  return <div>
+    Jayu
+  </div>
 } 
 export default App
