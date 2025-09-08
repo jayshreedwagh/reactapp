@@ -1,3 +1,7 @@
 body{
   background-color: rosybrown;
 }
+button{
+  background-color: lightseagreen;
+  padding: 5px 10px;
+}
