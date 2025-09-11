@@ -1,16 +1,14 @@
 import  { useState } from "react"
 
-const App =() =>{
-  let user="Jayshree"
-  
-  const changeUser = () =>{
-    user="Ram"
+const App =() =>{ 
+  const [user, setA]=useState("Sau")
+  const changeUSer = () =>{
+    setA("Jayu")
   }
-
   return (
     <div>
     <h1>Username is {user}</h1>
-    <button onClick={changeUser}>Chane User</button>
+    <button onClick={changeUSer}>Chane User</button>
     </div>
   )
 } 
