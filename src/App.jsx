@@ -1,14 +1,28 @@
-import  { useState } from "react"
+import { useState } from "react"
 
 const App =() =>{ 
-  const [user, setA]=useState("Sau")
-  const changeUSer = () =>{
-    setA("Jayu")
+  
+  const [username, changeUser]=useState('')
+
+  const submitHandler=(e)=>{
+    e.preventDefault()
+
+    console.log(username)
+
+    changeUser('')
   }
+  
   return (
     <div>
-    <h1>Username is {user}</h1>
-    <button onClick={changeUSer}>Chane User</button>
+    <form onSubmit={(e)=>submitHandler(e)}>
+      <input value={username}
+      onChange={(e)=>
+        changeUser(e.target.value)
+      }
+      type="text" placeholder="Enter Your Name"
+      />
+      <button>Submit</button>
+    </form>
     </div>
   )
 } 
