@@ -1,28 +1,10 @@
-import { useState } from "react"
+import Card from './Components/Card';
 
 const App =() =>{ 
   
-  const [username, changeUser]=useState('')
-
-  const submitHandler=(e)=>{
-    e.preventDefault()
-
-    console.log(username)
-
-    changeUser('')
-  }
-  
   return (
     <div>
-    <form onSubmit={(e)=>submitHandler(e)}>
-      <input value={username}
-      onChange={(e)=>
-        changeUser(e.target.value)
-      }
-      type="text" placeholder="Enter Your Name"
-      />
-      <button>Submit</button>
-    </form>
+      <Card />
     </div>
   )
 } 
